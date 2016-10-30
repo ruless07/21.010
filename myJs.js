@@ -8,42 +8,28 @@ $('#answerAdd').dialog(
 function dialogOpen(){
   $('#answerAdd').dialog('open')
 }
-
-
-
-var textA=function (){
-var  text=$('#textAnswer').text();
-return text;
-}
-var boolA=function(){
-    var tf=document.getElementsByName('aTrueFalse');
-    for (var i=0;i<tf.length; i++) {
-        if (tf[i].checked) {
-            alert('Выбран '+i+' radiobutton');
-        }
-    }
-}
 //massiv
 var massA=[];
 //constructor obA
-function AnswerObj(textt,booll) {
-  this.text=textt;
-  this.bool=booll;
+function AnswerObj() {
+
+  var tf=document.getElementsByName('aTrueFalse');
+  for (var i=0;i<tf.length; i++) {
+      if (tf[i].checked) {
+      this.bool=false  ;
+      }
+      else{this.bool=true}}
+  this.text=$('#textAnswer').val();
 }
-
-
-
-
-//
-
-
 function plass2(){
-  var newAnswer=new AnswerObj(textA,boolA);
-  if ("text" in newAnswer) {
-//  alert( "Свойство name существует!" );
-}
+  var newAnswer=new AnswerObj();
+
+
 massA.push(newAnswer);
-alert(massA[0].text);
-alert(massA[0].bool);
+for(var i=0;massA.length;i++){
+  alert(massA[i].['text']);
+alert(massA[i].bool);
+}
+//alert(massA[0].bool);
 $('#answerAdd').dialog('close');
 }
