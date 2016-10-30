@@ -27,7 +27,7 @@ function plass2(){
 
 massA.push(newAnswer);
 for(var i=0;massA.length;i++){
-  alert(massA[i].['text']);
+  alert(massA[i].text);
 alert(massA[i].bool);
 }
 //alert(massA[0].bool);
