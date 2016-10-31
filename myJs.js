@@ -9,27 +9,28 @@ function dialogOpen(){
   $('#answerAdd').dialog('open')
 }
 //massiv
-var massA=[];
+var answers = [];
+
 //constructor obA
-function AnswerObj() {
-
-  var tf=document.getElementsByName('aTrueFalse');
-  for (var i=0;i<tf.length; i++) {
-      if (tf[i].checked) {
-      this.bool=false  ;
-      }
-      else{this.bool=true}}
-  this.text=$('#textAnswer').val();
+function AnswerObj(text, right) {
+  this.right = right;
+  this.text = text;
+  console.log("created " + this);
 }
-function plass2(){
-  var newAnswer=new AnswerObj();
 
 
-massA.push(newAnswer);
-for(var i=0;massA.length;i++){
-  alert(massA[i].text);
-alert(massA[i].bool);
-}
-//alert(massA[0].bool);
-$('#answerAdd').dialog('close');
+function plass2() {
+
+
+  let text = $('#textAnswer').val();
+  let right = $('input[name=radio]:checked', '#myForm');
+  console.log(right.toString());
+  let answer = new AnswerObj(text, right);
+  answers.push(answer);
+
+  for(var i = 0; i < answers.length; i++) {
+    console.log(answers[i]);
+  }
+
+  $('#answerAdd').dialog('close');
 }
