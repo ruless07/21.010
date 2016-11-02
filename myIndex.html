@@ -1,34 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
+<meta name="description" content="This is 21.010" charset="utf-8">
+<title>My project</title>
 
-  <title>My projekt</title>
- <link href="myCss.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" />
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
- <script src="jquery-3.1.0.min.js"></script>
- <link type="text/css" href="jquery-ui-1.12.1.custom/jquery-ui.css" rel="stylesheet" />
-<script type="text/javascript" src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
-
+<link href="myCss.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
-<div id='answerAdd'>
-   <textarea id='textAnswer' name='atext' value='введите текст'></textarea>
-    <div id="group1">
-<form id="myForm">
-<input type="radio" id="true" value=true><label for="true">Правда</label>
-<input type="radio" id="false" value=false><label for="false">Ложь</label>
-<input type='button' value="plass2" onclick='plass2()'>
-</form>
+<div id='answerDialog'>
+  <form id="myForm">
+    <textarea id='textAnswer' name='atext' value='введите текст'></textarea>
+    <div id="answerTabBar">
+        <input type="checkbox" id="rightAnswer">right answer
+        <input type='button' id="button3" value="add">
+    </div>
+  </form>
 </div>
-</div>
 
+<input type='button' id="button1" value="button1" >
 
-<input type='button' value="test2" onclick='test2()'>
-<input type='button' value="test1" onclick='dialogOpen()'>
-
-
+<script src="myJs.js"></script>
 </body>
-<script type="text/javascript" src="myJs.js"></script>
 </html>
