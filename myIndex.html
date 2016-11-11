@@ -5,13 +5,19 @@
 <title>My project</title>
 
 <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-<link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" />
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.min.js">
+</script>
 
 <link href="myCss.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-
+  <div id='vue-app'>
+   <ol>
+    <li v-for="answer in answers">
+      {{ answer.text }} {{ answer.right ? "*" : ""}}
+    </li>
+  </ol> 
+  </div>
 <div id='answerDialog'>
   <form id="myForm">
     <textarea id='textAnswer' name='atext' value='введите текст'></textarea>
